@@ -3,51 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>kt cloud TECH UP</title>
-    <!-- Tailwind CSS (CDN) -->
+    <title>kt cloud 클라우드 인프라 | kt cloud TECH UP</title>
+    <meta name="description" content="kt cloud 클라우드 인프라 전문가 과정 랜딩 페이지">
+    <meta property="og:title" content="kt cloud 클라우드 인프라 | kt cloud TECH UP">
+    <meta property="og:description" content="kt cloud 클라우드 인프라 전문가 과정 랜딩 페이지">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- Tailwind CSS (디자인을 위한 스타일시트) -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Lucide Icons (CDN) -->
+    <!-- Lucide Icons (아이콘) -->
     <script src="https://unpkg.com/lucide@latest"></script>
-    <!-- Noto Sans KR (Google Fonts) -->
+    <!-- Noto Sans KR (한글 폰트) -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Noto Sans KR', sans-serif; }
-        html { scroll-behavior: smooth; }
+        html { scroll-behavior: smooth; } /* 부드러운 스크롤 이동 */
         
         /* 스크롤 애니메이션 클래스 */
         .reveal {
             opacity: 0;
             transform: translateY(30px);
-            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+            transition: all 0.8s cubic-bezier(0.5, 0, 1);
         }
         .reveal.active {
             opacity: 1;
             transform: translateY(0);
         }
-
-        /* 폼 라디오 버튼 선택 시 스타일 적용을 위한 커스텀 클래스 */
-        input[type="radio"]:checked + span {
-            color: #3b82f6; /* blue-500 */
-        }
     </style>
 </head>
-<body class="bg-slate-950 text-slate-50 min-h-screen">
-    <!-- Header -->
+<body class="bg-slate-950 text-slate-50">
+
+    <!-- 상단 헤더 메뉴 -->
     <header class="bg-slate-900/80 backdrop-blur-md border-b border-slate-800 sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
             <div class="flex items-center">
+                <!-- 로고 이미지 (logo.png 파일을 같은 폴더에 넣어주세요) -->
                 <img src="./logo.png" alt="kt cloud TECH UP" class="h-10" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <!-- 로고 이미지가 없을 경우 대체 텍스트 -->
                 <div class="font-bold text-2xl text-blue-500 tracking-tighter hidden">
                     kt cloud<span class="text-slate-300"> TECH UP</span>
                 </div>
             </div>
             <div class="flex items-center space-x-4 text-sm font-medium text-slate-300">
-                <!-- 전화번호 삭제됨 -->
+                <!-- 모바일에서 누르면 바로 전화걸기 -->
+                <a href="tel:1533-6176" class="hidden sm:flex items-center hover:text-white transition">
+                    <i data-lucide="phone" class="w-4 h-4 mr-2"></i>
+                    1533-6176
+                </a>
+                <!-- 상단 교육지원하기 버튼 -->
+                <a href="https://naver.me/FFqECDDv" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-4 py-2 text-sm font-bold text-white bg-blue-600 hover:bg-blue-500 rounded-lg transition shadow-md shadow-blue-500/20">
+                    <span>교육지원하기</span>
+                    <i data-lucide="arrow-up-right" class="w-4 h-4 ml-1.5"></i>
+                </a>
             </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- 메인 배너 (Hero Section) -->
     <section class="bg-slate-900 text-white py-20 lg:py-32 relative overflow-hidden reveal">
         <div class="absolute inset-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center mix-blend-overlay"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
@@ -61,14 +73,22 @@
                 <p class="mb-4">확장성과 안정성을 구축하는 인프라 전문가 과정</p>
                 <p class="text-blue-300 font-medium tracking-wide">#클라우드 운영 #IaC #비용 최적화 #운영 자동화</p>
             </div>
+            <!-- 1. 교육일정 위에 칸에 교육지원하기 버튼 (1cm 아래로 이동 및 가로 길이 확장) -->
+            <div class="flex justify-center mt-10">
+                <a href="https://naver.me/FFqECDDv" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center w-full max-w-sm sm:max-w-md px-12 sm:px-16 py-4 text-lg font-bold text-white bg-blue-600 hover:bg-blue-500 rounded-xl shadow-lg shadow-blue-500/30 transition transform hover:-translate-y-0.5 tracking-wide">
+                    <span>교육지원하기</span>
+                    <i data-lucide="arrow-up-right" class="w-5 h-5 ml-2"></i>
+                </a>
+            </div>
         </div>
     </section>
 
-    <!-- Education Overview -->
+    <!-- 교육 개요 섹션 -->
     <section class="py-16 bg-slate-900 border-t border-slate-800 reveal">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="bg-slate-950 rounded-3xl p-8 md:p-10 border border-slate-800 shadow-2xl">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <!-- 왼쪽: 일정, 인원, 방법 -->
                     <div class="space-y-6">
                         <div class="flex items-center">
                             <div class="w-12 h-12 rounded-2xl bg-blue-500/20 flex items-center justify-center text-blue-400 mr-5 shrink-0">
@@ -76,7 +96,7 @@
                             </div>
                             <div>
                                 <p class="text-sm text-slate-400 mb-1 font-medium">교육 일정</p>
-                                <p class="font-bold text-lg text-white">26.10.21 (수) - 27.05.11 (화)</p>
+                                <p class="font-bold text-lg text-white">26. 10. 30. (금) ~ 27. 5. 21. (금)</p>
                             </div>
                         </div>
                         <div class="flex items-center">
@@ -99,6 +119,7 @@
                         </div>
                     </div>
                     
+                    <!-- 오른쪽: 교육비 -->
                     <div class="md:border-l md:border-slate-800 md:pl-10 flex flex-col justify-center">
                         <div class="flex items-start mb-4">
                             <div class="w-12 h-12 rounded-2xl bg-emerald-500/20 flex items-center justify-center text-emerald-400 mr-5 shrink-0">
@@ -121,7 +142,7 @@
         </div>
     </section>
 
-    <!-- Benefits -->
+    <!-- 수강생 특별 혜택 섹션 -->
     <section class="py-20 bg-slate-950 reveal">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
@@ -129,6 +150,7 @@
                 <p class="text-slate-400">오직 kt cloud TECH UP에서만 누릴 수 있는 압도적인 지원</p>
             </div>
             
+            <!-- 혜택 그룹 1 -->
             <div class="mb-16">
                 <h3 class="text-2xl font-bold text-white mb-8 border-l-4 border-blue-500 pl-4">목표를 현실로 만드는 맞춤형 커리어 지원</h3>
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -164,8 +186,8 @@
                         <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mb-4 text-blue-400">
                             <i data-lucide="award" class="w-6 h-6"></i>
                         </div>
-                        <h4 class="text-lg font-bold mb-2 text-yellow-400">우수 수료생 채용 지원 시 우대</h4>
-                        <p class="text-slate-400 text-sm leading-relaxed">탁월한 성과를 인정받은 우수 수료생은 kt cloud 채용 과정에서 우대 혜택을 받아 취업 경쟁력을 높일 수 있습니다.</p>
+                        <h4 class="text-lg font-bold mb-2 text-white">실전 경험으로 쌓는 취업 경쟁력</h4>
+                        <p class="text-slate-400 text-sm leading-relaxed">프로젝트 기반의 실전 커리큘럼과 현직자 피드백을 통해 실무 역량을 쌓으며, 취업 시장에서 경쟁력 있는 포트폴리오와 역량을 갖출 수 있습니다.</p>
                     </div>
                     <div class="bg-slate-900 rounded-2xl p-6 border border-slate-800 hover:border-slate-700 transition">
                         <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mb-4 text-blue-400">
@@ -177,6 +199,7 @@
                 </div>
             </div>
 
+            <!-- 혜택 그룹 2 -->
             <div>
                 <h3 class="text-2xl font-bold text-white mb-8 border-l-4 border-emerald-500 pl-4">학습을 돕는 지원부터 성장을 이끄는 혜택까지</h3>
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -212,7 +235,7 @@
                         <div class="w-12 h-12 bg-emerald-500/20 rounded-xl flex items-center justify-center mb-4 text-emerald-400">
                             <i data-lucide="bot" class="w-6 h-6"></i>
                         </div>
-                        <h4 class="text-lg font-bold mb-2 text-white">생성형 AI 도구 지원</h4>
+                        <h4 class="text-lg font-bold mb-2 text-white">클라우드 인프라 도구 지원</h4>
                         <p class="text-slate-400 text-sm leading-relaxed">AI와 함께라면 학습이 더 빠르고 똑똑해집니다.</p>
                     </div>
                     <div class="bg-slate-900 rounded-2xl p-6 border border-slate-800 hover:border-slate-700 transition">
@@ -245,322 +268,167 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Curriculum -->
-        <section class="py-20 bg-slate-900 border-t border-slate-800 reveal">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl font-bold text-white mb-4">체계적인 커리큘럼</h2>
-                    <p class="text-slate-400">기초부터 실무 프로젝트, 취업까지 완벽하게 대비하는 과정</p>
+    <!-- 커리큘럼 섹션 -->
+    <section class="py-20 bg-slate-900 border-t border-slate-800 reveal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-white mb-4">체계적인 커리큘럼</h2>
+                <p class="text-slate-400">기초부터 실무 프로젝트, 취업까지 완벽하게 대비하는 과정</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- 그룹 1 -->
+                <div class="bg-slate-950 rounded-2xl p-8 border border-slate-800 hover:border-slate-700 transition">
+                    <h3 class="text-xl font-bold mb-4 text-blue-400 border-b border-slate-800 pb-3">1. 핵심 직무 역량</h3>
+                    <ul class="space-y-3 text-slate-300 font-medium">
+                        <li class="flex items-start"><span class="text-blue-500 mr-2">•</span>클라우드 네트워크 운영</li>
+                        <li class="flex items-start"><span class="text-blue-500 mr-2">•</span>Azure 및 kt cloud 실습</li>
+                        <li class="flex items-start"><span class="text-blue-500 mr-2">•</span>테라폼 기반 IaC 설계</li>
+                        <li class="flex items-start"><span class="text-blue-500 mr-2">•</span>고가용성 재해 복구 설계</li>
+                    </ul>
                 </div>
-                <div class="grid md:grid-cols-2 gap-8">
-                    <div class="bg-slate-950 rounded-2xl p-8 border border-slate-800 hover:border-slate-700 transition">
-                        <h3 class="text-xl font-bold mb-4 text-blue-400 border-b border-slate-800 pb-3">1. 핵심 직무 역량</h3>
-                        <ul class="space-y-3 text-slate-300 font-medium">
-                            <li class="flex items-start"><span class="text-blue-500 mr-2">•</span>클라우드 네트워크 운영</li>
-                            <li class="flex items-start"><span class="text-blue-500 mr-2">•</span>Azure 및 kt cloud 실습</li>
-                            <li class="flex items-start"><span class="text-blue-500 mr-2">•</span>테라폼 기반 IaC 설계</li>
-                            <li class="flex items-start"><span class="text-blue-500 mr-2">•</span>고가용성 재해 복구 설계</li>
-                        </ul>
-                    </div>
-                    <div class="bg-slate-950 rounded-2xl p-8 border border-slate-800 hover:border-slate-700 transition">
-                        <h3 class="text-xl font-bold mb-4 text-blue-400 border-b border-slate-800 pb-3">2. 트렌드 & 신기술</h3>
-                        <ul class="space-y-3 text-slate-300 font-medium">
-                            <li class="flex items-start"><span class="text-blue-500 mr-2">•</span>DevOps CI/CD 자동화</li>
-                            <li class="flex items-start"><span class="text-blue-500 mr-2">•</span>서비스 메시 기반 MSA</li>
-                            <li class="flex items-start"><span class="text-blue-500 mr-2">•</span>K8s 아키텍처 설계 구현</li>
-                            <li class="flex items-start"><span class="text-blue-500 mr-2">•</span>오픈스택 기반 컨테이너</li>
-                        </ul>
-                    </div>
-                    <div class="bg-slate-950 rounded-2xl p-8 border border-slate-800 hover:border-slate-700 transition">
-                        <h3 class="text-xl font-bold mb-4 text-blue-400 border-b border-slate-800 pb-3">3. 실전 프로젝트</h3>
-                        <ul class="space-y-3 text-slate-300 font-medium">
-                            <li class="flex items-start"><span class="text-blue-500 mr-2">•</span>IaaS 기반 인프라 구축</li>
-                            <li class="flex items-start"><span class="text-blue-500 mr-2">•</span>하이브리드 고가용성 설계</li>
-                            <li class="flex items-start"><span class="text-blue-500 mr-2">•</span>클라우드 복합 솔루션</li>
-                            <li class="flex items-start"><span class="text-blue-500 mr-2">•</span>창의적 문제 해결 해커톤</li>
-                        </ul>
-                    </div>
-                    <div class="bg-slate-950 rounded-2xl p-8 border border-slate-800 hover:border-slate-700 transition">
-                        <h3 class="text-xl font-bold mb-4 text-blue-400 border-b border-slate-800 pb-3">4. 취업 지원 & 커리어</h3>
-                        <ul class="space-y-3 text-slate-300 font-medium">
-                            <li class="flex items-start"><span class="text-blue-500 mr-2">•</span>포트폴리오 기획 및 구성</li>
-                            <li class="flex items-start"><span class="text-blue-500 mr-2">•</span>이력서 작성 및 자기 PR</li>
-                            <li class="flex items-start"><span class="text-blue-500 mr-2">•</span>취업 준비 역량 테스트 대비</li>
-                            <li class="flex items-start"><span class="text-blue-500 mr-2">•</span>kt cloud 현직자 특강 및 커리어 성장 전략</li>
-                        </ul>
-                    </div>
+                <!-- 그룹 2 -->
+                <div class="bg-slate-950 rounded-2xl p-8 border border-slate-800 hover:border-slate-700 transition">
+                    <h3 class="text-xl font-bold mb-4 text-blue-400 border-b border-slate-800 pb-3">2. 트렌드 & 신기술</h3>
+                    <ul class="space-y-3 text-slate-300 font-medium">
+                        <li class="flex items-start"><span class="text-blue-500 mr-2">•</span>DevOps CI/CD 자동화</li>
+                        <li class="flex items-start"><span class="text-blue-500 mr-2">•</span>서비스 메시 기반 MSA</li>
+                        <li class="flex items-start"><span class="text-blue-500 mr-2">•</span>K8s 아키텍처 설계 구현</li>
+                        <li class="flex items-start"><span class="text-blue-500 mr-2">•</span>오픈스택 기반 컨테이너</li>
+                    </ul>
+                </div>
+                <!-- 그룹 3 -->
+                <div class="bg-slate-950 rounded-2xl p-8 border border-slate-800 hover:border-slate-700 transition">
+                    <h3 class="text-xl font-bold mb-4 text-blue-400 border-b border-slate-800 pb-3">3. 실전 프로젝트</h3>
+                    <ul class="space-y-3 text-slate-300 font-medium">
+                        <li class="flex items-start"><span class="text-blue-500 mr-2">•</span>IaaS 기반 인프라 구축</li>
+                        <li class="flex items-start"><span class="text-blue-500 mr-2">•</span>하이브리드 고가용성 설계</li>
+                        <li class="flex items-start"><span class="text-blue-500 mr-2">•</span>클라우드 복합 솔루션</li>
+                        <li class="flex items-start"><span class="text-blue-500 mr-2">•</span>창의적 문제 해결 해커톤</li>
+                    </ul>
+                </div>
+                <!-- 그룹 4 -->
+                <div class="bg-slate-950 rounded-2xl p-8 border border-slate-800 hover:border-slate-700 transition">
+                    <h3 class="text-xl font-bold mb-4 text-blue-400 border-b border-slate-800 pb-3">4. 취업 지원 & 커리어</h3>
+                    <ul class="space-y-3 text-slate-300 font-medium">
+                        <li class="flex items-start"><span class="text-blue-500 mr-2">•</span>포트폴리오 기획 및 구성</li>
+                        <li class="flex items-start"><span class="text-blue-500 mr-2">•</span>이력서 작성 및 자기 PR</li>
+                        <li class="flex items-start"><span class="text-blue-500 mr-2">•</span>취업 준비 역량 테스트 대비</li>
+                        <li class="flex items-start"><span class="text-blue-500 mr-2">•</span>kt cloud 현직자 특강 및 커리어 성장 전략</li>
+                    </ul>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- WARM UP DAY -->
-        <section class="py-20 bg-slate-900 border-t border-slate-800 reveal">
-            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl font-bold text-white mb-4 tracking-tight">WARM UP DAY</h2>
-                    <p class="text-slate-400 text-lg">과정 시작 전, 챌린저 간 연결감과 팀 분위기를 만드는 네트워킹</p>
-                </div>
-                <div class="relative w-full overflow-hidden rounded-2xl shadow-2xl border border-slate-800 pt-[56.25%]">
-                    <iframe 
-                        class="absolute top-0 left-0 w-full h-full"
-                        src="https://www.youtube.com/embed/bo9IgI0sPpE" 
-                        title="WARM UP DAY" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                        allowfullscreen>
-                    </iframe>
-                </div>
+    <!-- WARM UP DAY 섹션 -->
+    <section class="py-20 bg-slate-900 border-t border-slate-800 reveal">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-white mb-4 tracking-tight">WARM UP DAY</h2>
+                <p class="text-slate-400 text-lg">과정 시작 전, 챌린저 간 연결감과 팀 분위기를 만드는 네트워킹</p>
             </div>
-        </section>
+            <div class="relative w-full overflow-hidden rounded-2xl shadow-2xl border border-slate-800" style="padding-top: 56.25%;">
+                <iframe 
+                    class="absolute top-0 left-0 w-full h-full"
+                    src="https://www.youtube.com/embed/bo9IgI0sPpE" 
+                    title="WARM UP DAY" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </section>
 
-        <!-- Team Project -->
-        <section class="py-20 bg-slate-950 border-t border-slate-800 reveal">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl font-bold text-white mb-4">조직 문화까지 체득하는 대규모 팀 프로젝트</h2>
-                    <p class="text-slate-400">실제 스타트업 환경을 그대로 재현한 실전 프로젝트</p>
+    <!-- 팀 프로젝트 섹션 -->
+    <section class="py-20 bg-slate-950 border-t border-slate-800 reveal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-white mb-4">조직 문화까지 체득하는 대규모 팀 프로젝트</h2>
+                <p class="text-slate-400">실제 스타트업 환경을 그대로 재현한 실전 프로젝트</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-slate-900 rounded-2xl p-8 border border-slate-800">
+                    <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mb-6 text-blue-400">
+                        <i data-lucide="users" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-white">함께라서 가능한 스타트업 경험</h3>
+                    <p class="text-slate-400 leading-relaxed">
+                        TECH UP은 서로 다른 직군의 대규모 인원이 모여 하나의 팀으로 협업합니다. 기획, 디자인, 개발 등 전 직군이 스타트업 환경을 재현하며 실전을 경험합니다.
+                    </p>
                 </div>
                 
-                <div class="grid md:grid-cols-2 gap-8">
-                    <div class="bg-slate-900 rounded-2xl p-8 border border-slate-800">
-                        <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mb-6 text-blue-400">
-                            <i data-lucide="users" class="w-6 h-6"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-4 text-white">함께라서 가능한 스타트업 경험</h3>
-                        <p class="text-slate-400 leading-relaxed">
-                            TECH UP은 서로 다른 직군의 대규모 인원이 모여 하나의 팀으로 협업합니다. 기획, 디자인, 개발 등 전 직군이 스타트업 환경을 재현하며 실전을 경험합니다.
-                        </p>
+                <div class="bg-slate-900 rounded-2xl p-8 border border-slate-800">
+                    <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mb-6 text-blue-400">
+                        <i data-lucide="building" class="w-6 h-6"></i>
                     </div>
-                    
-                    <div class="bg-slate-900 rounded-2xl p-8 border border-slate-800">
-                        <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mb-6 text-blue-400">
-                            <i data-lucide="building" class="w-6 h-6"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-4 text-white">성장하는 스타트업의 팀 사이즈</h3>
-                        <p class="text-slate-400 leading-relaxed">
-                            대규모 팀은 소통은 가능하지만 체계 없이는 운영이 어려운 규모입니다. 역할을 나누고 협업하며 실제 조직 운영을 그대로 체험합니다.
-                        </p>
-                    </div>
-                    
-                    <div class="bg-slate-900 rounded-2xl p-8 border border-slate-800">
-                        <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mb-6 text-blue-400">
-                            <i data-lucide="target" class="w-6 h-6"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-4 text-white">실무 수준의 협업 난이도 체험</h3>
-                        <p class="text-slate-400 leading-relaxed">
-                            여러 기능을 동시에 개발하고 직군 간 종속성을 조율합니다. 단일 코드베이스에서 대규모 인원이 버전 관리하며 QA까지 수행해 협업을 익힙니다.
-                        </p>
-                    </div>
-                    
-                    <div class="bg-slate-900 rounded-2xl p-8 border border-slate-800">
-                        <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mb-6 text-blue-400">
-                            <i data-lucide="award" class="w-6 h-6"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-4 text-white">6개월 후, 달라진 당신</h3>
-                        <p class="text-slate-400 leading-relaxed">
-                            대규모 협업 프로젝트와 다양한 네트워크를 확보합니다. 스타트업 문화와 프로세스를 익히며 복잡한 프로젝트를 완수하는 힘을 기릅니다.
-                        </p>
-                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-white">성장하는 스타트업의 팀 사이즈</h3>
+                    <p class="text-slate-400 leading-relaxed">
+                        대규모 팀은 소통은 가능하지만 체계 없이는 운영이 어려운 규모입니다. 역할을 나누고 협업하며 실제 조직 운영을 그대로 체험합니다.
+                    </p>
                 </div>
-            </div>
-        </section>
-
-        <!-- CTA Form -->
-        <section class="py-20 bg-sky-200 text-slate-900 reveal" id="apply">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex flex-col lg:flex-row gap-12 items-center lg:items-start">
-                    
-                    <div class="lg:w-1/2 lg:pr-8 pt-8">
-                        <h2 class="text-4xl md:text-5xl font-extrabold mb-6 leading-tight text-slate-900">
-                            지금 바로<br>
-                            클라우드 인프라로 <br>
-                            시작하세요.
-                        </h2>
-                        <p class="text-slate-700 mb-10 text-lg font-medium">
-                            국비지원 자격 여부부터 취업 및 교육과정까지<br>
-                            <span class="underline underline-offset-4">무료로 상담해드립니다.</span>
-                        </p>
-                        
-                        <div class="space-y-6">
-                            <div class="flex items-center">
-                                <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mr-4 shadow-sm">
-                                    <i data-lucide="laptop" class="w-5 h-5 text-sky-500"></i>
-                                </div>
-                                <div>
-                                    <p class="text-sm text-slate-500 font-medium">교육방식</p>
-                                    <p class="text-xl font-bold text-slate-900">비대면 실시간 온라인강의</p>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="mt-8 font-bold text-lg text-slate-800">여러분의 꿈을 응원합니다!</p>
-                    </div>
-
-                    <div class="lg:w-1/2 w-full">
-                        <div class="bg-white rounded-2xl p-8 shadow-2xl text-slate-900">
-                            <h3 class="text-2xl font-bold mb-6 flex items-center">
-                                kt cloud 클라우드 인프라 상담신청 <span class="w-2 h-2 rounded-full bg-red-500 ml-2"></span>
-                            </h3>
-                            
-                            <!-- Success Message (Hidden by default) -->
-                            <div id="success-message" class="hidden text-center py-16">
-                                <div class="w-20 h-20 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                                    <svg class="w-10 h-10 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
-                                </div>
-                                <h4 class="text-2xl font-bold text-slate-900 mb-3">상담 신청이 완료되었습니다!</h4>
-                                <p class="text-slate-600 font-medium">빠른 시일 내에 기재해주신 연락처로 안내해 드리겠습니다.</p>
-                            </div>
-                            
-                            <!-- Form -->
-                            <form id="consult-form" class="space-y-4">
-                                <input type="hidden" name="_form_id" value="e0753dd0894eeda822c09200b6c34a1e">
-                                
-                                <div>
-                                    <label class="block text-sm font-bold text-slate-700 mb-1">과정명</label>
-                                    <input type="text" name="course" value="KT클라우드 인프라" readonly class="w-full px-4 py-3 rounded-lg border border-slate-300 bg-slate-50 text-slate-500 focus:outline-none transition">
-                                </div>
-
-                                <div class="grid grid-cols-2 gap-4">
-                                    <div>
-                                        <label class="block text-sm font-bold text-slate-700 mb-1">이름</label>
-                                        <input type="text" name="name" placeholder="홍길동" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition">
-                                    </div>
-                                    <div>
-                                        <label class="block text-sm font-bold text-slate-700 mb-1">생년</label>
-                                        <input type="text" name="birth_year" placeholder="예: 97년생" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition">
-                                    </div>
-                                </div>
-                                
-                                <div>
-                                    <label class="block text-sm font-bold text-slate-700 mb-1">연락처</label>
-                                    <input type="tel" name="phone" placeholder="010-0000-0000" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition">
-                                </div>
-                                
-                                <div>
-                                    <label class="block text-sm font-bold text-slate-700 mb-2">교육목적</label>
-                                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
-                                        <label class="flex items-center justify-center px-2 py-3 border border-slate-300 rounded-lg cursor-pointer hover:bg-slate-50 transition">
-                                            <input type="radio" name="purpose" value="취업/이직" class="mr-2" required>
-                                            <span class="text-sm font-medium">취업/이직</span>
-                                        </label>
-                                        <label class="flex items-center justify-center px-2 py-3 border border-slate-300 rounded-lg cursor-pointer hover:bg-slate-50 transition">
-                                            <input type="radio" name="purpose" value="자기개발" class="mr-2">
-                                            <span class="text-sm font-medium">자기개발</span>
-                                        </label>
-                                        <label class="flex items-center justify-center px-2 py-3 border border-slate-300 rounded-lg cursor-pointer hover:bg-slate-50 transition">
-                                            <input type="radio" name="purpose" value="창업" class="mr-2">
-                                            <span class="text-sm font-medium">창업</span>
-                                        </label>
-                                        <label class="flex items-center justify-center px-2 py-3 border border-slate-300 rounded-lg cursor-pointer hover:bg-slate-50 transition">
-                                            <input type="radio" name="purpose" value="기타" class="mr-2">
-                                            <span class="text-sm font-medium">기타</span>
-                                        </label>
-                                    </div>
-                                </div>
-                                
-                                <div>
-                                    <label class="block text-sm font-bold text-slate-700 mb-1">문의내용</label>
-                                    <textarea name="message" rows="3" placeholder="궁금하신 점을 자유롭게 적어주세요." class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition resize-none"></textarea>
-                                </div>
-                                
-                                <div class="pt-2">
-                                    <div class="flex items-center justify-between bg-slate-50 p-3 rounded-lg border border-slate-200">
-                                        <label class="flex items-center cursor-pointer">
-                                            <input type="checkbox" name="privacy_consent" required class="w-4 h-4 text-blue-600 border-slate-300 rounded focus:ring-blue-500">
-                                            <span class="ml-2 text-sm font-bold text-slate-700">개인정보 수집 및 이용에 동의합니다. (필수)</span>
-                                        </label>
-                                        <button type="button" onclick="togglePrivacy()" id="privacy-toggle-btn" class="text-xs text-slate-500 bg-slate-200 px-2 py-1 rounded hover:bg-slate-300 transition">
-                                            자세히보기 ▼
-                                        </button>
-                                    </div>
-                                    <div id="privacy-content" class="hidden mt-2 p-3 bg-slate-100 rounded-lg text-xs text-slate-600 leading-relaxed border border-slate-200">
-                                        kt cloud TECH UP 실시간온라인문의 신청을 위해 다음과 같이 개인정보 수집 및 이용합니다.<br>
-                                        - 수집목적 : 온라인문의<br>
-                                        - 수집항목 : 이름, 생년, 연락처, 교육목적, 문의내용<br>
-                                        - 보유기간 : 60일
-                                    </div>
-                                </div>
-                                
-                                <button type="submit" class="w-full bg-slate-900 text-white py-4 rounded-lg font-bold text-lg hover:bg-slate-800 transition flex items-center justify-center mt-4">
-                                    상담 신청하기
-                                </button>
-                                <p class="text-center text-xs text-slate-400 mt-2">개인정보는 상담 목적으로만 사용되며 안전하게 보호됩니다.</p>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <footer class="bg-slate-950 text-slate-500 py-12 text-sm text-center border-t border-slate-900">
-            <div class="max-w-7xl mx-auto px-4">
-                <div class="flex justify-center mb-6">
-                    <img src="./logo.png" alt="kt cloud TECH UP" class="h-8 opacity-50 grayscale" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                    <div class="font-bold text-xl text-white tracking-tighter hidden">
-                        kt cloud<span class="text-slate-500"> TECH UP</span>
-                    </div>
-                </div>
-                <p class="mb-2">교육기관: kt cloud TECH UP</p>
-                <p>&copy; 2024 kt cloud TECH UP. All rights reserved.</p>
-            </div>
-        </footer>
-
-        <!-- Scripts -->
-        <script>
-            // 1. Initialize Icons
-            lucide.createIcons();
-
-            // 2. Privacy Toggle
-            function togglePrivacy() {
-                const content = document.getElementById('privacy-content');
-                const btn = document.getElementById('privacy-toggle-btn');
                 
-                if (content.classList.contains('hidden')) {
-                    content.classList.remove('hidden');
-                    btn.innerText = '자세히보기 ▲';
-                } else {
-                    content.classList.add('hidden');
-                    btn.innerText = '자세히보기 ▼';
-                }
-            }
+                <div class="bg-slate-900 rounded-2xl p-8 border border-slate-800">
+                    <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mb-6 text-blue-400">
+                        <i data-lucide="target" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-white">실무 수준의 협업 난이도 체험</h3>
+                    <p class="text-slate-400 leading-relaxed">
+                        여러 기능을 동시에 개발하고 직군 간 종속성을 조율합니다. 단일 코드베이스에서 대규모 인원이 버전 관리하며 QA까지 수행해 협업을 익힙니다.
+                    </p>
+                </div>
+                
+                <div class="bg-slate-900 rounded-2xl p-8 border border-slate-800">
+                    <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mb-6 text-blue-400">
+                        <i data-lucide="award" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-white">6개월 후, 달라진 당신</h3>
+                    <p class="text-slate-400 leading-relaxed">
+                        대규모 협업 프로젝트와 다양한 네트워크를 확보합니다. 스타트업 문화와 프로세스를 익히며 복잡한 프로젝트를 완수하는 힘을 기릅니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            // 3. Scroll Animations
-            document.addEventListener("DOMContentLoaded", function() {
-                const observer = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add('active');
-                            observer.unobserve(entry.target);
-                        }
-                    });
-                }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-500 py-12 text-sm text-center border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-center mb-6">
+                <img src="./logo.png" alt="kt cloud TECH UP" class="h-8 opacity-50 grayscale" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="font-bold text-xl text-white tracking-tighter hidden">
+                    kt cloud<span class="text-slate-500"> TECH UP</span>
+                </div>
+            </div>
+            <p class="mb-2">교육기관: kt cloud TECH UP</p>
+            <p>&copy; 2024 kt cloud TECH UP. All rights reserved.</p>
+        </div>
+    </footer>
 
-                document.querySelectorAll('.reveal').forEach((el) => {
-                    observer.observe(el);
+    <!-- Scripts -->
+    <script>
+        // 1. Initialize Icons
+        lucide.createIcons();
+
+        // 2. Scroll Animations
+        document.addEventListener("DOMContentLoaded", function() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
                 });
-            });
+            }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
 
-            // 4. Form Submission (Optimistic UI)
-            document.getElementById('consult-form').addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                const form = e.target;
-                const formData = new FormData(form);
-                
-                // Hide form, show success message immediately
-                form.classList.add('hidden');
-                document.getElementById('success-message').classList.remove('hidden');
-                
-                // Send in background with keepalive
-                fetch('https://inputhaven.com/api/v1/submit', {
-                    method: 'POST',
-                    body: formData,
-                    keepalive: true
-                }).catch(err => console.error('Form submission error:', err));
+            document.querySelectorAll('.reveal').forEach((el) => {
+                observer.observe(el);
             });
-        </script>
-    </body>
+        });
+    </script>
+</body>
 </html>
-
